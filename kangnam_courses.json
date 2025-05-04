@@ -1,0 +1,1813 @@
+{
+  "user": {
+    "name": "홍기현",
+    "department": "소프트웨어응용학부"
+  },
+  "courses": [
+    {
+      "title": "신입생세미나I[01] ( 화 14:40-17:20 )",
+      "professor": "최인엽",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A",
+              "신입생세미나 워크북(PDF)"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "신입생 세미나-진로 빌드업 운영 사항 안내",
+            "activities": [
+              "진로 빌드업 운영 안내 영상 동영상"
+            ]
+          },
+          {
+            "title": "진로 빌드업 신청 방법 안내 영상",
+            "activities": [
+              "진로 빌드업 신청 방법 안내  동영상",
+              "진로 빌드업 신청 방법"
+            ]
+          },
+          {
+            "title": "직업선호도검사L형 검사 결과 제출 안내",
+            "activities": [
+              "직업선호도검사L형 제출(중간고사 )"
+            ],
+            "assignment_status": {
+              "error": "과제 제출 정보 테이블을 찾을 수 없습니다."
+            }
+          },
+          {
+            "title": "4주차",
+            "activities": []
+          },
+          {
+            "title": "5주차",
+            "activities": []
+          },
+          {
+            "title": "6주차",
+            "activities": []
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "8주차",
+            "activities": []
+          },
+          {
+            "title": "9주차(진로 빌드업 프로젝트)",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [
+          {
+            "title": "진로 빌드업 운영 안내 영상 동영상",
+            "url": "https://ecampus.kangnam.ac.kr/mod/vod/view.php?id=573591",
+            "time": ", 03:49",
+            "period": "2025-03-04 00:00:00 ~ 2025-03-18 23:59:59 (지각 : 2025-03-25 23:59:59)"
+          },
+          {
+            "title": "진로 빌드업 신청 방법 안내  동영상",
+            "url": "https://ecampus.kangnam.ac.kr/mod/vod/view.php?id=573592",
+            "time": ", 04:34",
+            "period": "2025-03-11 00:00:00 ~ 2025-03-18 23:59:59 (지각 : 2025-03-25 23:59:59)"
+          }
+        ],
+        "attendance_summary": []
+      },
+      "notices": [
+        {
+          "title": "직업선호도검사L형 검사 방법 및 제출 안내(중간고사 과제)",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=570396&bwid=208183"
+        },
+        {
+          "title": "진로빌드업 집단 상담 신청 안내",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=570396&bwid=206362"
+        }
+      ]
+    },
+    {
+      "title": "진로지도상담III[01]",
+      "professor": "최인엽",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "1주차",
+            "activities": []
+          },
+          {
+            "title": "2주차",
+            "activities": []
+          },
+          {
+            "title": "3주차",
+            "activities": []
+          },
+          {
+            "title": "4주차",
+            "activities": []
+          },
+          {
+            "title": "5주차",
+            "activities": []
+          },
+          {
+            "title": "6주차",
+            "activities": []
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "8주차",
+            "activities": []
+          },
+          {
+            "title": "9주차",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [],
+        "attendance_summary": [
+          {
+            "week": "1",
+            "status": "-"
+          },
+          {
+            "week": "2",
+            "status": "-"
+          },
+          {
+            "week": "3",
+            "status": "-"
+          },
+          {
+            "week": "4",
+            "status": "-"
+          },
+          {
+            "week": "5",
+            "status": "-"
+          },
+          {
+            "week": "6",
+            "status": "-"
+          },
+          {
+            "week": "7",
+            "status": "-"
+          },
+          {
+            "week": "8",
+            "status": "-"
+          },
+          {
+            "week": "9",
+            "status": "-"
+          },
+          {
+            "week": "10",
+            "status": "-"
+          },
+          {
+            "week": "11",
+            "status": "-"
+          },
+          {
+            "week": "12",
+            "status": "-"
+          },
+          {
+            "week": "13",
+            "status": "-"
+          },
+          {
+            "week": "14",
+            "status": "-"
+          },
+          {
+            "week": "15",
+            "status": "-"
+          }
+        ]
+      },
+      "notices": []
+    },
+    {
+      "title": "캡스톤디자인(SW)I[02] ( 목 09:00-12:40 )",
+      "professor": "최인엽 / 박정수",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "6주차",
+            "activities": []
+          },
+          {
+            "title": "1주차",
+            "activities": [
+              "졸업작품 신청서 제출"
+            ],
+            "assignment_status": {
+              "제출 여부": "제출 완료",
+              "채점 상황": "채점되지 않음",
+              "종료 일시": "2025-03-11 15:00",
+              "마감까지 남은 기한": "과제 제출이 29 분 37 초 빨랐습니다.",
+              "최종 수정 일시": "2025-03-11 14:30",
+              "첨부파일": "2025-1 졸업작품 신청서_홍기현.hwp",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          },
+          {
+            "title": "2주차",
+            "activities": []
+          },
+          {
+            "title": "3주차",
+            "activities": []
+          },
+          {
+            "title": "4주차",
+            "activities": []
+          },
+          {
+            "title": "5주차",
+            "activities": []
+          },
+          {
+            "title": "6주차",
+            "activities": []
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "8주차",
+            "activities": []
+          },
+          {
+            "title": "9주차",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [],
+        "attendance_summary": [
+          {
+            "week": "1",
+            "status": "-"
+          },
+          {
+            "week": "2",
+            "status": "-"
+          },
+          {
+            "week": "3",
+            "status": "-"
+          },
+          {
+            "week": "4",
+            "status": "-"
+          },
+          {
+            "week": "5",
+            "status": "-"
+          },
+          {
+            "week": "6",
+            "status": "-"
+          },
+          {
+            "week": "7",
+            "status": "-"
+          },
+          {
+            "week": "8",
+            "status": "-"
+          },
+          {
+            "week": "9",
+            "status": "-"
+          },
+          {
+            "week": "10",
+            "status": "-"
+          },
+          {
+            "week": "11",
+            "status": "-"
+          },
+          {
+            "week": "12",
+            "status": "-"
+          },
+          {
+            "week": "13",
+            "status": "-"
+          },
+          {
+            "week": "14",
+            "status": "-"
+          },
+          {
+            "week": "15",
+            "status": "-"
+          }
+        ]
+      },
+      "notices": [
+        {
+          "title": "6주차 캡스톤 관련",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=573895&bwid=210052"
+        },
+        {
+          "title": "캡스톤 출석 관련",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=573895&bwid=209059"
+        },
+        {
+          "title": "[박정수 교수] 캡스톤 관련",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=573895&bwid=208382"
+        },
+        {
+          "title": "[박정수 교수] 4주차 캡스톤 관련",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=573895&bwid=206901"
+        }
+      ]
+    },
+    {
+      "title": "AIoT소프트웨어[00] ( 금 11:50-14:30 )",
+      "professor": "최인엽",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "6주차",
+            "activities": [
+              "#1",
+              "Ch05 메시지정의 만들고 서비스다루기",
+              "Ch06 액션다루기"
+            ],
+            "assignment_status": {
+              "error": "과제 제출 정보 테이블을 찾을 수 없습니다."
+            }
+          },
+          {
+            "title": "1주차",
+            "activities": []
+          },
+          {
+            "title": "2주차",
+            "activities": [
+              "Ch01 ROS Introduction"
+            ]
+          },
+          {
+            "title": "3주차",
+            "activities": [
+              "Ch02 ROS 기본명령 익히기"
+            ]
+          },
+          {
+            "title": "4주차",
+            "activities": [
+              "Ch03 Python으로ROS2명령다루기"
+            ]
+          },
+          {
+            "title": "5주차",
+            "activities": [
+              "Ch04 패키지와메시지정의만들고 토픽다루기"
+            ]
+          },
+          {
+            "title": "6주차",
+            "activities": [
+              "#1",
+              "Ch05 메시지정의 만들고 서비스다루기",
+              "Ch06 액션다루기"
+            ],
+            "assignment_status": {
+              "error": "과제 제출 정보 테이블을 찾을 수 없습니다."
+            }
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "8주차",
+            "activities": []
+          },
+          {
+            "title": "9주차",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [],
+        "attendance_summary": []
+      },
+      "notices": [
+        {
+          "title": "조편성 공지",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=573233&bwid=204083"
+        }
+      ]
+    },
+    {
+      "title": "K프로젝트I[00]",
+      "professor": "원지영",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "1주차",
+            "activities": []
+          },
+          {
+            "title": "2주차",
+            "activities": []
+          },
+          {
+            "title": "3주차",
+            "activities": []
+          },
+          {
+            "title": "4주차",
+            "activities": []
+          },
+          {
+            "title": "5주차",
+            "activities": []
+          },
+          {
+            "title": "6주차",
+            "activities": []
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "8주차",
+            "activities": []
+          },
+          {
+            "title": "9주차",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [],
+        "attendance_summary": [
+          {
+            "week": "1",
+            "status": "-"
+          },
+          {
+            "week": "2",
+            "status": "-"
+          },
+          {
+            "week": "3",
+            "status": "-"
+          },
+          {
+            "week": "4",
+            "status": "-"
+          },
+          {
+            "week": "5",
+            "status": "-"
+          },
+          {
+            "week": "6",
+            "status": "-"
+          },
+          {
+            "week": "7",
+            "status": "-"
+          },
+          {
+            "week": "8",
+            "status": "-"
+          },
+          {
+            "week": "9",
+            "status": "-"
+          },
+          {
+            "week": "10",
+            "status": "-"
+          },
+          {
+            "week": "11",
+            "status": "-"
+          },
+          {
+            "week": "12",
+            "status": "-"
+          },
+          {
+            "week": "13",
+            "status": "-"
+          },
+          {
+            "week": "14",
+            "status": "-"
+          },
+          {
+            "week": "15",
+            "status": "-"
+          }
+        ]
+      },
+      "notices": []
+    },
+    {
+      "title": "인공지능서비스기획및실습[00] ( 수 14:40-17:20 )",
+      "professor": "김성철",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "1주차",
+            "activities": []
+          },
+          {
+            "title": "2주차",
+            "activities": []
+          },
+          {
+            "title": "3주차",
+            "activities": []
+          },
+          {
+            "title": "4주차",
+            "activities": []
+          },
+          {
+            "title": "5주차",
+            "activities": []
+          },
+          {
+            "title": "6주차",
+            "activities": []
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "8주차",
+            "activities": []
+          },
+          {
+            "title": "9주차",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [],
+        "attendance_summary": [
+          {
+            "week": "1",
+            "status": "-"
+          },
+          {
+            "week": "2",
+            "status": "-"
+          },
+          {
+            "week": "3",
+            "status": "-"
+          },
+          {
+            "week": "4",
+            "status": "-"
+          },
+          {
+            "week": "5",
+            "status": "-"
+          },
+          {
+            "week": "6",
+            "status": "-"
+          },
+          {
+            "week": "7",
+            "status": "-"
+          },
+          {
+            "week": "8",
+            "status": "-"
+          },
+          {
+            "week": "9",
+            "status": "-"
+          },
+          {
+            "week": "10",
+            "status": "-"
+          },
+          {
+            "week": "11",
+            "status": "-"
+          },
+          {
+            "week": "12",
+            "status": "-"
+          },
+          {
+            "week": "13",
+            "status": "-"
+          },
+          {
+            "week": "14",
+            "status": "-"
+          },
+          {
+            "week": "15",
+            "status": "-"
+          }
+        ]
+      },
+      "notices": []
+    },
+    {
+      "title": "데이터수집과처리[00] ( 화 09:00-11:40 )",
+      "professor": "김진묵",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "7주차 (4/15, 화) : 프로젝트 수행",
+            "activities": [
+              "Week 7"
+            ]
+          },
+          {
+            "title": "1주차 (3/4, 화)",
+            "activities": [
+              "오리엔테이션: 강좌 소개 및 수업 운영 방안",
+              "토의: 기말 프로젝트"
+            ]
+          },
+          {
+            "title": "2주차 (3/11, 화)",
+            "activities": [
+              "2주차 강의 슬라이드 : 데이터 수집의 개요 및 계획 수립",
+              "기말 프로젝트 최종(조편성 & 발표 일정 포함)",
+              "기말 프로젝트 발표: 세부평가항목표"
+            ]
+          },
+          {
+            "title": "3주차 (3/18, 화): 팀별 자기주도학습 (no class meeting!)",
+            "activities": []
+          },
+          {
+            "title": "4주차 (3/25, 화): 팀별 프로젝트 계획서 발표",
+            "activities": [
+              "프로젝트 계획서 (due by 3/25, 화, 오전 08시)"
+            ]
+          },
+          {
+            "title": "5주차 (4/1, 화) : 프로젝트 수행",
+            "activities": [
+              "Week 5",
+              "자연어 처리"
+            ]
+          },
+          {
+            "title": "6주차 (4/8, 화) : 프로젝트 수행",
+            "activities": [
+              "Week 6"
+            ]
+          },
+          {
+            "title": "7주차 (4/15, 화) : 프로젝트 수행",
+            "activities": [
+              "Week 7"
+            ]
+          },
+          {
+            "title": "8주차 (4/22, 화) : 프로젝트 수행",
+            "activities": [
+              "Week 8"
+            ]
+          },
+          {
+            "title": "9주차 (4/29, 화) : 프로젝트 수행",
+            "activities": [
+              "Week 9"
+            ]
+          },
+          {
+            "title": "10주차 (5/6, 화) : 대체공휴일 팀별 자기주도학습 (no class meeting!)",
+            "activities": []
+          },
+          {
+            "title": "11주차 (5/13, 화) : 프로젝트 수행",
+            "activities": [
+              "Week 11"
+            ]
+          },
+          {
+            "title": "12주차 (5/20, 화) : 프로젝트 수행",
+            "activities": [
+              "Week 12"
+            ]
+          },
+          {
+            "title": "13주차  (5/27, 화) : 프로젝트 발표",
+            "activities": []
+          },
+          {
+            "title": "14주차 (6/3, 화) : 프로젝트 발표, 기말시험",
+            "activities": []
+          },
+          {
+            "title": "15주차 (6/10, 화) : 최종보고서 (팀별 자기주도학습 - no class meeting!)",
+            "activities": [
+              "최종 보고서 (due by 6/10, 화, 오전 08시)"
+            ],
+            "assignment_status": {
+              "제출 여부": "제출 안 함",
+              "채점 상황": "채점되지 않음",
+              "종료 일시": "2025-06-10 08:00",
+              "마감까지 남은 기한": "54 일 9 시간",
+              "최종 수정 일시": "-",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          }
+        ],
+        "video_attendance": [],
+        "attendance_summary": [
+          {
+            "week": "1",
+            "status": "-"
+          },
+          {
+            "week": "2",
+            "status": "-"
+          },
+          {
+            "week": "3",
+            "status": "-"
+          },
+          {
+            "week": "4",
+            "status": "-"
+          },
+          {
+            "week": "5",
+            "status": "-"
+          },
+          {
+            "week": "6",
+            "status": "-"
+          },
+          {
+            "week": "7",
+            "status": "-"
+          },
+          {
+            "week": "8",
+            "status": "-"
+          },
+          {
+            "week": "9",
+            "status": "-"
+          },
+          {
+            "week": "10",
+            "status": "-"
+          },
+          {
+            "week": "11",
+            "status": "-"
+          },
+          {
+            "week": "12",
+            "status": "-"
+          },
+          {
+            "week": "13",
+            "status": "-"
+          },
+          {
+            "week": "14",
+            "status": "-"
+          },
+          {
+            "week": "15",
+            "status": "-"
+          }
+        ]
+      },
+      "notices": [
+        {
+          "title": "저학년(1, 2학년) 학생 대상 수강 신청 취소 안내",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=570780&bwid=202349"
+        },
+        {
+          "title": "환영합니다!",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=570780&bwid=202347"
+        }
+      ]
+    },
+    {
+      "title": "기계학습전처리[00] ( 월 11:50-14:30 )",
+      "professor": "이준석",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "6주차",
+            "activities": [
+              "06주차-데이터전처리와 통계분석-설명 동영상",
+              "06주차-데이터전처리와 통계분석",
+              "06주차-데이터전처리와 통계분석-실습 동영상",
+              "06주차-데이터전처리와 통계분석-실습예제"
+            ]
+          },
+          {
+            "title": "1주차",
+            "activities": [
+              "01주차-오리엔테이션",
+              "팀원"
+            ]
+          },
+          {
+            "title": "2주차",
+            "activities": [
+              "02주차-정형데이터의 전처리(I)",
+              "02주차-정형데이터 전처리(I)-실습예제"
+            ]
+          },
+          {
+            "title": "3주차",
+            "activities": [
+              "팀 소개하기",
+              "03주차-정형데이터의 전처리(II)"
+            ],
+            "assignment_status": {
+              "제출 여부": "제출 완료",
+              "채점 상황": "채점되지 않음",
+              "종료 일시": "2025-03-25 00:00",
+              "마감까지 남은 기한": "과제 제출이 12 시간 36 분 빨랐습니다.",
+              "최종 수정 일시": "2025-03-24 11:23",
+              "첨부파일": "기계학습 전처리 팀 소개_Global Ai News Hub .pdf",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          },
+          {
+            "title": "4주차",
+            "activities": [
+              "04주차-범주형 데이터의 처리"
+            ]
+          },
+          {
+            "title": "5주차",
+            "activities": [
+              "프로젝트 계획서 제출-1",
+              "05주차-API를 이용한 데이터수집"
+            ],
+            "assignment_status": {
+              "팀": "4",
+              "제출 여부": "제출 완료",
+              "채점 상황": "채점되지 않음",
+              "종료 일시": "2025-04-07 00:00",
+              "마감까지 남은 기한": "과제 제출이 53 분 52 초 늦었습니다.",
+              "최종 수정 일시": "2025-04-07 00:53",
+              "첨부파일": "Global-AI-Chronicle-AI-ETL.pdf",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          },
+          {
+            "title": "6주차",
+            "activities": [
+              "06주차-데이터전처리와 통계분석-설명 동영상",
+              "06주차-데이터전처리와 통계분석",
+              "06주차-데이터전처리와 통계분석-실습 동영상",
+              "06주차-데이터전처리와 통계분석-실습예제"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "8주차",
+            "activities": [
+              "08주차-중간발표 제출"
+            ],
+            "assignment_status": {
+              "팀": "4",
+              "제출 여부": "미제출",
+              "채점 상황": "채점되지 않음",
+              "종료 일시": "2025-04-29 00:00",
+              "마감까지 남은 기한": "12 일 1 시간",
+              "최종 수정 일시": "-",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          },
+          {
+            "title": "9주차",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [
+          {
+            "title": "06주차-데이터전처리와 통계분석-설명 동영상",
+            "url": "https://ecampus.kangnam.ac.kr/mod/vod/view.php?id=589515",
+            "time": ", 58:18",
+            "period": "2025-04-14 00:00:00 ~ 2025-04-21 23:59:59 (지각 : 2025-04-28 23:59:59)"
+          },
+          {
+            "title": "06주차-데이터전처리와 통계분석-실습 동영상",
+            "url": "https://ecampus.kangnam.ac.kr/mod/vod/view.php?id=589641",
+            "time": ", 30:04",
+            "period": "2025-04-14 00:00:00 ~ 2025-04-21 23:59:59 (지각 : 2025-04-28 23:59:59)"
+          },
+          {
+            "title": "06주차-데이터전처리와 통계분석-설명 동영상",
+            "url": "https://ecampus.kangnam.ac.kr/mod/vod/view.php?id=589515",
+            "time": ", 58:18",
+            "period": "2025-04-14 00:00:00 ~ 2025-04-21 23:59:59 (지각 : 2025-04-28 23:59:59)"
+          },
+          {
+            "title": "06주차-데이터전처리와 통계분석-실습 동영상",
+            "url": "https://ecampus.kangnam.ac.kr/mod/vod/view.php?id=589641",
+            "time": ", 30:04",
+            "period": "2025-04-14 00:00:00 ~ 2025-04-21 23:59:59 (지각 : 2025-04-28 23:59:59)"
+          }
+        ],
+        "attendance_summary": [
+          {
+            "week": "1",
+            "status": "-"
+          },
+          {
+            "week": "2",
+            "status": "-"
+          },
+          {
+            "week": "3",
+            "status": "-"
+          },
+          {
+            "week": "4",
+            "status": "-"
+          },
+          {
+            "week": "5",
+            "status": "-"
+          },
+          {
+            "week": "6",
+            "status": "결석"
+          },
+          {
+            "week": "7",
+            "status": "-"
+          },
+          {
+            "week": "8",
+            "status": "-"
+          },
+          {
+            "week": "9",
+            "status": "-"
+          },
+          {
+            "week": "10",
+            "status": "-"
+          },
+          {
+            "week": "11",
+            "status": "-"
+          },
+          {
+            "week": "12",
+            "status": "-"
+          },
+          {
+            "week": "13",
+            "status": "-"
+          },
+          {
+            "week": "14",
+            "status": "-"
+          },
+          {
+            "week": "15",
+            "status": "-"
+          }
+        ]
+      },
+      "notices": [
+        {
+          "title": "기계학습전처리 팀 안내",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=571852&bwid=204659"
+        }
+      ]
+    },
+    {
+      "title": "기계학습과특징추출[00] ( 월 09:00-11:40 )",
+      "professor": "곽찬희",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "6주차",
+            "activities": [
+              "6주차 강의자료",
+              "6주차_실습"
+            ]
+          },
+          {
+            "title": "1주차",
+            "activities": []
+          },
+          {
+            "title": "2주차",
+            "activities": [
+              "2주차 강의자료",
+              "2주차 실습"
+            ]
+          },
+          {
+            "title": "3주차",
+            "activities": [
+              "3주차 강의자료"
+            ]
+          },
+          {
+            "title": "4주차",
+            "activities": [
+              "4주차",
+              "실습"
+            ]
+          },
+          {
+            "title": "5주차",
+            "activities": [
+              "5주차 강의자료",
+              "5주차 실습자료"
+            ]
+          },
+          {
+            "title": "6주차",
+            "activities": [
+              "6주차 강의자료",
+              "6주차_실습"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "8주차",
+            "activities": []
+          },
+          {
+            "title": "9주차",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [],
+        "attendance_summary": [
+          {
+            "week": "1",
+            "status": "-"
+          },
+          {
+            "week": "2",
+            "status": "-"
+          },
+          {
+            "week": "3",
+            "status": "-"
+          },
+          {
+            "week": "4",
+            "status": "-"
+          },
+          {
+            "week": "5",
+            "status": "-"
+          },
+          {
+            "week": "6",
+            "status": "-"
+          },
+          {
+            "week": "7",
+            "status": "-"
+          },
+          {
+            "week": "8",
+            "status": "-"
+          },
+          {
+            "week": "9",
+            "status": "-"
+          },
+          {
+            "week": "10",
+            "status": "-"
+          },
+          {
+            "week": "11",
+            "status": "-"
+          },
+          {
+            "week": "12",
+            "status": "-"
+          },
+          {
+            "week": "13",
+            "status": "-"
+          },
+          {
+            "week": "14",
+            "status": "-"
+          },
+          {
+            "week": "15",
+            "status": "-"
+          }
+        ]
+      },
+      "notices": [
+        {
+          "title": "조편성",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=573485&bwid=206301"
+        },
+        {
+          "title": "수업시작시간안내",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=573485&bwid=203176"
+        },
+        {
+          "title": "수강안내",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=573485&bwid=202636"
+        }
+      ]
+    },
+    {
+      "title": "딥러닝프레임워크[00] ( 화 11:50-14:30 )",
+      "professor": "최인엽",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "1주차",
+            "activities": []
+          },
+          {
+            "title": "2주차",
+            "activities": [
+              "Ch1 미분자동계산"
+            ]
+          },
+          {
+            "title": "3주차",
+            "activities": [
+              "Ch02 미분자동계산2"
+            ]
+          },
+          {
+            "title": "4주차",
+            "activities": [
+              "Ch03 복잡한 계산그래프 미분",
+              "#1"
+            ],
+            "assignment_status": {
+              "제출 여부": "제출 안 함",
+              "채점 상황": "채점됨",
+              "종료 일시": "2025-03-26 23:55",
+              "마감까지 남은 기한": "제출 마감이 지난 시간: 20 일 22 시간",
+              "최종 수정 일시": "-",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          },
+          {
+            "title": "5주차",
+            "activities": [
+              "Ch04 딥러닝프레임워크 기본구현사항 패키지화"
+            ]
+          },
+          {
+            "title": "6주차",
+            "activities": [
+              "Ch05 함수최적화"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": []
+          },
+          {
+            "title": "8주차",
+            "activities": []
+          },
+          {
+            "title": "9주차",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [],
+        "attendance_summary": [
+          {
+            "week": "1",
+            "status": "-"
+          },
+          {
+            "week": "2",
+            "status": "-"
+          },
+          {
+            "week": "3",
+            "status": "-"
+          },
+          {
+            "week": "4",
+            "status": "-"
+          },
+          {
+            "week": "5",
+            "status": "-"
+          },
+          {
+            "week": "6",
+            "status": "-"
+          },
+          {
+            "week": "7",
+            "status": "-"
+          },
+          {
+            "week": "8",
+            "status": "-"
+          },
+          {
+            "week": "9",
+            "status": "-"
+          },
+          {
+            "week": "10",
+            "status": "-"
+          },
+          {
+            "week": "11",
+            "status": "-"
+          },
+          {
+            "week": "12",
+            "status": "-"
+          },
+          {
+            "week": "13",
+            "status": "-"
+          },
+          {
+            "week": "14",
+            "status": "-"
+          },
+          {
+            "week": "15",
+            "status": "-"
+          }
+        ]
+      },
+      "notices": [
+        {
+          "title": "인공지능 서버 사용 매뉴얼 공지",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=577405&bwid=206631"
+        },
+        {
+          "title": "조편성 공지",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=577405&bwid=204803"
+        }
+      ]
+    },
+    {
+      "title": "데이터베이스실습[00] ( 수 11:50-14:30 )",
+      "professor": "주해종",
+      "weeks": {
+        "weeks": [
+          {
+            "title": "강의 개요",
+            "activities": [
+              "공지사항",
+              "강좌 Q&A"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": [
+              "7주차 강의자료",
+              "참고자료 1-학사관리DB",
+              "참고자료2-입원관리_DB"
+            ]
+          },
+          {
+            "title": "1주차",
+            "activities": [
+              "1주차 강의자료"
+            ]
+          },
+          {
+            "title": "2주차",
+            "activities": [
+              "상용 데이터베이스관리시스템(DBMS) 조사하기",
+              "2주차 강의자료"
+            ],
+            "assignment_status": {
+              "제출 여부": "제출 완료",
+              "채점 상황": "채점되지 않음",
+              "종료 일시": "2025-03-12 14:30",
+              "마감까지 남은 기한": "과제 제출이 1 시간 15 분 빨랐습니다.",
+              "최종 수정 일시": "2025-03-12 13:14",
+              "첨부파일": "상용 데이터베이스 관리 시스템.pptx",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          },
+          {
+            "title": "3주차",
+            "activities": [
+              "3주차 강의자료",
+              "각자 원하는 데이터 모델 설계하기"
+            ],
+            "assignment_status": {
+              "제출 여부": "제출 완료",
+              "채점 상황": "채점되지 않음",
+              "종료 일시": "2025-03-19 14:30",
+              "마감까지 남은 기한": "과제 제출이 1 시간 31 분 빨랐습니다.",
+              "최종 수정 일시": "2025-03-19 12:58",
+              "첨부파일": "Print.pdf",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          },
+          {
+            "title": "4주차",
+            "activities": [
+              "4주차 강의 자료",
+              "[액세스로 데이터베이스 만들기]",
+              "[판매DB]동영상_액세스"
+            ],
+            "assignment_status": {
+              "제출 여부": "제출 완료",
+              "채점 상황": "채점되지 않음",
+              "종료 일시": "2025-03-26 14:30",
+              "마감까지 남은 기한": "과제 제출이 38 분 47 초 빨랐습니다.",
+              "최종 수정 일시": "2025-03-26 13:51",
+              "첨부파일": "대학.accdb",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          },
+          {
+            "title": "5주차",
+            "activities": [
+              "5주차 강의자료"
+            ]
+          },
+          {
+            "title": "6주차",
+            "activities": [
+              "6주차 강의 참고자료-동영상"
+            ]
+          },
+          {
+            "title": "7주차",
+            "activities": [
+              "7주차 강의자료",
+              "참고자료 1-학사관리DB",
+              "참고자료2-입원관리_DB"
+            ]
+          },
+          {
+            "title": "8주차",
+            "activities": [
+              "데이터베이스실습 중간고사 대체 리포트 안내"
+            ],
+            "assignment_status": {
+              "제출 여부": "제출 안 함",
+              "채점 상황": "채점되지 않음",
+              "종료 일시": "2025-04-29 23:55",
+              "마감까지 남은 기한": "13 일 1 시간",
+              "최종 수정 일시": "-",
+              "제출물 설명": "___picture______name___ - ___time______content___댓글 보기댓글 (0)댓글 저장 | 취소"
+            }
+          },
+          {
+            "title": "9주차",
+            "activities": []
+          },
+          {
+            "title": "10주차",
+            "activities": []
+          },
+          {
+            "title": "11주차",
+            "activities": []
+          },
+          {
+            "title": "12주차",
+            "activities": []
+          },
+          {
+            "title": "13주차",
+            "activities": []
+          },
+          {
+            "title": "14주차",
+            "activities": []
+          },
+          {
+            "title": "15주차",
+            "activities": []
+          }
+        ],
+        "video_attendance": [
+          {
+            "title": "[판매DB]동영상_액세스",
+            "url": "https://ecampus.kangnam.ac.kr/mod/vod/view.php?id=583552",
+            "time": ", 26:49",
+            "period": "2025-03-26 00:00:00 ~ 2025-04-02 23:59:59 (지각 : 2025-04-09 23:59:59)"
+          },
+          {
+            "title": "6주차 강의 참고자료-동영상",
+            "url": "https://ecampus.kangnam.ac.kr/mod/vod/view.php?id=589733",
+            "time": ", 54:28",
+            "period": "2025-04-09 00:00:00 ~ 2025-04-16 23:59:59 (지각 : 2025-04-23 23:59:59)"
+          }
+        ],
+        "attendance_summary": [
+          {
+            "week": "1",
+            "status": "-"
+          },
+          {
+            "week": "2",
+            "status": "-"
+          },
+          {
+            "week": "3",
+            "status": "-"
+          },
+          {
+            "week": "4",
+            "status": "출석"
+          },
+          {
+            "week": "5",
+            "status": "-"
+          },
+          {
+            "week": "6",
+            "status": "출석"
+          },
+          {
+            "week": "7",
+            "status": "-"
+          },
+          {
+            "week": "8",
+            "status": "-"
+          },
+          {
+            "week": "9",
+            "status": "-"
+          },
+          {
+            "week": "10",
+            "status": "-"
+          },
+          {
+            "week": "11",
+            "status": "-"
+          },
+          {
+            "week": "12",
+            "status": "-"
+          },
+          {
+            "week": "13",
+            "status": "-"
+          },
+          {
+            "week": "14",
+            "status": "-"
+          },
+          {
+            "week": "15",
+            "status": "-"
+          }
+        ]
+      },
+      "notices": [
+        {
+          "title": "[첨단산업아카데미] 데이터베이스 실습",
+          "link": "https://ecampus.kangnam.ac.kr/mod/ubboard/article.php?id=570747&bwid=202351"
+        }
+      ]
+    }
+  ]
+}
