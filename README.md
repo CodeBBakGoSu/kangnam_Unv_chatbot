@@ -123,6 +123,21 @@
    - 응답 생성 및 검증
 </details>
 
+### 2025-05-09: RAG 챗봇 품질 개선 및 테스트 환경 정비
+
+<details>
+<summary>🔧 주요 개선 사항</summary>
+
+- PersonalAgent, CommonAgent, GeneralAgent 등 에이전트의 Gemini API 사용 방식 통일
+- RAG 기반 답변 생성 로직 개선 및 디버깅 로그 추가
+- 토큰 사용량, RAG 청크 등 품질 확인용 정보 반환 기능 추가
+- LangGraph 워크플로우에서 state 병합 방식 개선 (token_usage, rag_chunks 등 정상 반영)
+- gemini_rag_test.py 등 유틸리티 스크립트의 import 및 파일 경로 오류 수정
+- 테스트 코드에서 user_context 전달 및 전체 RAG 파이프라인 정상화
+- 벡터DB 검색 결과 및 과목명 정규화 로직 점검
+
+</details>
+
 ### 다음 개발 계획
 
 <details>
