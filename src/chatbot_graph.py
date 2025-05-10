@@ -24,9 +24,36 @@ def create_chatbot_graph() -> Graph:
     
     # 노드 추가
     workflow.add_node("router", router.classify)
-    workflow.add_node("personal", personal.answer)
-    workflow.add_node("common", common.answer)
-    workflow.add_node("general", general.answer)
+    
+    def merge_state(state, result):
+        merged = dict(state)
+        for k, v in result.items():
+            if v is not None:
+                merged[k] = v
+        return merged
+
+    async def personal_node(state: ChatState):
+        agent = PersonalAgent()
+        message = state["messages"][-1]
+        context = state.get("user_context", {})
+        result = await agent.answer(message, context)
+        return merge_state(state, result)
+    
+    async def common_node(state: ChatState):
+        agent = CommonAgent()
+        message = state["messages"][-1]
+        result = await agent.answer(message)
+        return merge_state(state, result)
+
+    async def general_node(state: ChatState):
+        agent = GeneralAgent()
+        message = state["messages"][-1]
+        result = await agent.answer(message)
+        return merge_state(state, result)
+
+    workflow.add_node("personal", personal_node)
+    workflow.add_node("common", common_node)
+    workflow.add_node("general", general_node)
     
     # 엣지 연결
     def route_to_agent(state: ChatState) -> str:
@@ -84,4 +111,13 @@ async def process_message(message: str, user_context: Dict[str, Any] = None) -> 
     
     # 그래프 실행
     result = await graph.ainvoke(initial_state)
-    return result 
+    
+    # 최종 응답에 token_usage, rag_chunks가 있으면 포함해서 반환
+    return {
+        "messages": result.get("messages"),
+        "current_flow": result.get("current_flow"),
+        "response": result.get("response"),
+        "user_context": result.get("user_context"),
+        "token_usage": result.get("token_usage"),
+        "rag_chunks": result.get("rag_chunks"),
+    }

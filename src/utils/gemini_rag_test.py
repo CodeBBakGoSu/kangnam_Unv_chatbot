@@ -1,3 +1,6 @@
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
@@ -8,7 +11,7 @@ from sentence_transformers import SentenceTransformer
 from datetime import datetime, timedelta
 import tiktoken
 import re
-from course_preprocessor import SimilarityMatcher
+from src.etl.course_preprocessor import SimilarityMatcher
 
 # .env 파일 로드
 env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'config', '.env'))
@@ -50,7 +53,7 @@ class GeminiRAGTest:
     def _load_course_data(self) -> Dict[str, Any]:
         """코스 데이터 로드"""
         try:
-            with open('user_data/kangnam_courses_processed.json', 'r', encoding='utf-8') as f:
+            with open(os.path.join(os.path.dirname(__file__), '../../user_data/kangnam_courses_processed.json'), 'r', encoding='utf-8') as f:
                 return json.load(f)
         except Exception as e:
             print(f"코스 데이터 로드 실패: {e}")
@@ -461,7 +464,7 @@ def rag_query(query: str) -> str:
     
     # 사용자의 과목 데이터 로드
     try:
-        with open('user_data/kangnam_courses_processed.json', 'r', encoding='utf-8') as f:
+        with open(os.path.join(os.path.dirname(__file__), '../../user_data/kangnam_courses_processed.json'), 'r', encoding='utf-8') as f:
             user_data = json.load(f)
             user_courses = user_data.get("courses", [])
     except Exception as e:
@@ -498,7 +501,7 @@ def rag_query(query: str) -> str:
 def test_rag():
     """RAG 시스템 테스트"""
     test_queries = [
-        "데수처 수업 뭐해?",
+        "캡스톤 디자인 수업 교수님이 누구야?",
         "데베실 과제 있어?",
         "기계학습 다음주에 뭐해?",
         "aiot 수업 언제야?"

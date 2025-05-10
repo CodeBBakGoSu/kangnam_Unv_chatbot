@@ -8,14 +8,6 @@ class BaseAgent:
         # .env 파일 로드
         load_dotenv()
         
-        # API 키를 환경 변수에서 가져오기
-        api_key = os.getenv("GOOGLE_API_KEY")
-        if not api_key:
-            raise ValueError("GOOGLE_API_KEY가 환경 변수에 설정되지 않았습니다.")
-        
-        # Gemini API 클라이언트 초기화
-        self.client = genai.Client(api_key=api_key)
-        
         # 대화 기록을 저장하는 메모리
         self.memory: List[Dict[str, Any]] = []
     

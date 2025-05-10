@@ -47,6 +47,7 @@ async def test_chatbot():
             # 메시지 처리
             response = await process_message(test['message'], user_context)
             
+            
             # 응답 출력
             print("\n응답:")
             print(json.dumps(response, ensure_ascii=False, indent=2))
