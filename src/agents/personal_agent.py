@@ -45,11 +45,14 @@ class PersonalAgent(BaseAgent):
 
     def normalize_course_name_with_llm(self, query: str, user_courses: List[Dict[str, Any]]) -> str:
         """LLM을 사용하여 사용자 입력에서 과목명 추론"""
+        # 사용자의 과목 목록 추출
         course_names = [
-            course["title"].split("(")[0].strip()
+            course.get("title", "").split("(")[0].strip()  # 시간 정보 제외
             for course in user_courses
             if "title" in course
         ]
+        
+        print(f"[DEBUG] 사용자 과목 목록: {course_names}")
         
         prompt = f"""
 당신은 대학교 학생의 수강 과목을 찾아주는 도우미입니다.
@@ -73,20 +76,22 @@ class PersonalAgent(BaseAgent):
 답변:"""
 
         try:
-            response = llm.generate_content(prompt)
-            normalized_name = response.text.strip()
+            response = llm.generate_content(contents=prompt)
+            normalized_name = self.extract_text(response).strip()
+            print(f"[DEBUG] LLM 과목명 추론 결과: {normalized_name}")
             
             if normalized_name == "없음":
                 return None
-                
+            
+            # 정규화된 과목명과 가장 유사한 과목 찾기
             for course in user_courses:
-                course_title = course["title"].split("(")[0].strip()
-                if course_title.startswith(normalized_name) or normalized_name.startswith(course_title):
-                    return course["title"]
+                course_title = course.get("title", "").split("(")[0].strip()
+                if normalized_name.lower() in course_title.lower() or course_title.lower() in normalized_name.lower():
+                    return course.get("title", "")
             
             return None
         except Exception as e:
-            print(f"과목명 정규화 중 오류 발생: {e}")
+            print(f"[ERROR] 과목명 추론 중 오류 발생: {e}")
             return None
 
     def get_relevant_chunks(self, query: str, limit: int = 5) -> list:
@@ -126,8 +131,9 @@ class PersonalAgent(BaseAgent):
         return context
 
     def count_tokens(self, text: str) -> int:
+        """텍스트의 토큰 수 계산"""
         try:
-            response = llm.count_tokens(text)
+            response = llm.count_tokens(contents=text)
             print(f"[DEBUG] count_tokens({text[:30]}...): {response.total_tokens}")
             return response.total_tokens
         except Exception as e:
@@ -173,19 +179,32 @@ class PersonalAgent(BaseAgent):
 3. 구체적인 내용이나 과제
 4. 날짜나 기한 정보 (있는 경우)
 """
+        
         try:
-            response = llm.generate_content(prompt)
+            # 최신 API 방식으로 호출
+            response = llm.generate_content(contents=prompt)
             response_text = self.extract_text(response)
-            prompt_tokens = self.count_tokens(prompt)
-            response_tokens = self.count_tokens(response_text)
-            if prompt_tokens is None or response_tokens is None:
-                token_usage = None
-            else:
+            
+            # 토큰 사용량 계산
+            token_usage = None
+            if hasattr(response, 'usage_metadata'):
+                # 새로운 API의 usage_metadata 사용
                 token_usage = {
-                    "prompt_tokens": prompt_tokens,
-                    "response_tokens": response_tokens,
-                    "total_tokens": prompt_tokens + response_tokens
+                    "prompt_tokens": response.usage_metadata.prompt_token_count,
+                    "response_tokens": response.usage_metadata.candidates_token_count,
+                    "total_tokens": response.usage_metadata.total_token_count
                 }
+            else:
+                # 기존 방식 - 개별 토큰 계산
+                prompt_tokens = self.count_tokens(prompt)
+                response_tokens = self.count_tokens(response_text)
+                if prompt_tokens is not None and response_tokens is not None:
+                    token_usage = {
+                        "prompt_tokens": prompt_tokens,
+                        "response_tokens": response_tokens,
+                        "total_tokens": prompt_tokens + response_tokens
+                    }
+                
             return response_text, token_usage
         except Exception as e:
             print(f"응답 생성 중 오류 발생: {e}")
@@ -210,11 +229,15 @@ class PersonalAgent(BaseAgent):
             return {
                 "response": "죄송합니다. 관련된 정보를 찾을 수 없습니다.",
                 "requires_auth": False,
-                "token_usage": None,
                 "rag_chunks": []
             }
         context_str = self.format_context(relevant_chunks)
         response, token_usage = self.generate_response(message, context_str)
+        
+        # 토큰 사용량 로깅 (디버그 정보로만 사용)
+        if token_usage:
+            print(f"[DEBUG] 토큰 사용량: 프롬프트={token_usage.get('prompt_tokens')}, 응답={token_usage.get('response_tokens')}, 총={token_usage.get('total_tokens')}")
+        
         self.add_to_memory({
             "role": "user",
             "content": message,
@@ -227,7 +250,6 @@ class PersonalAgent(BaseAgent):
         return {
             "response": response,
             "requires_auth": False,
-            "token_usage": token_usage,
             "rag_chunks": relevant_chunks
         }
 

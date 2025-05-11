@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- 배경 -->
+  <rect width="1200" height="800" fill="#f7f9fc" />
+  
+  <!-- 헤더 -->
+  <rect x="0" y="0" width="1200" height="60" fill="#4A69BD" />
+  <text x="40" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">강남대학교 AI 챗봇</text>
+  
+  <!-- 왼쪽 패널 (학생 정보) -->
+  <rect x="20" y="80" width="250" height="700" rx="15" fill="#ffffff" filter="drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))" />
+  
+  <!-- 학생 프로필 -->
+  <circle cx="145" cy="140" r="40" fill="#e1e5e8" />
+  <text x="145" y="160" font-family="Arial, sans-serif" font-size="40" fill="#9aa3ac" text-anchor="middle">👤</text>
+  <text x="145" y="210" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333" text-anchor="middle">홍길동 님</text>
+  <text x="145" y="235" font-family="Arial, sans-serif" font-size="14" fill="#666666" text-anchor="middle">컴퓨터공학과 / 학번: 20250123</text>
+  
+  <!-- 학생 정보 섹션 -->
+  <rect x="40" y="270" width="210" height="1" fill="#e1e5e8" />
+  <text x="40" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333">수강 중인 과목</text>
+  
+  <!-- 수강 중인 과목 리스트 -->
+  <rect x="40" y="320" width="210" height="35" rx="5" fill="#f0f4f8" />
+  <text x="50" y="342" font-family="Arial, sans-serif" font-size="13" fill="#333333">인공지능개론 (3학점)</text>
+  
+  <rect x="40" y="365" width="210" height="35" rx="5" fill="#f0f4f8" />
+  <text x="50" y="387" font-family="Arial, sans-serif" font-size="13" fill="#333333">데이터베이스 (3학점)</text>
+  
+  <rect x="40" y="410" width="210" height="35" rx="5" fill="#f0f4f8" />
+  <text x="50" y="432" font-family="Arial, sans-serif" font-size="13" fill="#333333">알고리즘 분석 (3학점)</text>
+  
+  <rect x="40" y="455" width="210" height="35" rx="5" fill="#f0f4f8" />
+  <text x="50" y="477" font-family="Arial, sans-serif" font-size="13" fill="#333333">소프트웨어공학 (3학점)</text>
+  
+  <rect x="40" y="500" width="210" height="35" rx="5" fill="#f0f4f8" />
+  <text x="50" y="522" font-family="Arial, sans-serif" font-size="13" fill="#333333">캡스톤디자인 (3학점)</text>
+  
+  <!-- 탐색 메뉴 -->
+  <rect x="40" y="550" width="210" height="1" fill="#e1e5e8" />
+  <text x="40" y="580" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333">메뉴</text>
+  
+  <!-- 메뉴 버튼들 (뉴모픽 스타일) -->
+  <rect x="40" y="600" width="210" height="45" rx="22.5" fill="#f0f4f8" filter="drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))" />
+  <text x="145" y="627" font-family="Arial, sans-serif" font-size="14" fill="#4A69BD" text-anchor="middle">학사 일정</text>
+  
+  <rect x="40" y="655" width="210" height="45" rx="22.5" fill="#f0f4f8" filter="drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))" />
+  <text x="145" y="682" font-family="Arial, sans-serif" font-size="14" fill="#4A69BD" text-anchor="middle">수강 신청</text>
+  
+  <rect x="40" y="710" width="210" height="45" rx="22.5" fill="#f0f4f8" filter="drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))" />
+  <text x="145" y="737" font-family="Arial, sans-serif" font-size="14" fill="#4A69BD" text-anchor="middle">도서관 서비스</text>
+  
+  <!-- 메인 챗봇 영역 -->
+  <rect x="290" y="80" width="890" height="700" rx="15" fill="#ffffff" filter="drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))" />
+  
+  <!-- 챗봇 대화 영역 -->
+  <rect x="310" y="100" width="850" height="550" rx="10" fill="#f7f9fc" />
+  
+  <!-- 챗봇 메시지 예시 -->
+  <rect x="340" y="130" width="500" height="80" rx="15" fill="#e1e7f5" />
+  <text x="370" y="160" font-family="Arial, sans-serif" font-size="14" fill="#333333">안녕하세요, 홍길동 님! 강남대학교 AI 챗봇입니다.</text>
+  <text x="370" y="185" font-family="Arial, sans-serif" font-size="14" fill="#333333">어떤 도움이 필요하신가요?</text>
+  
+  <!-- 사용자 메시지 예시 -->
+  <rect x="650" y="230" width="400" height="60" rx="15" fill="#4A69BD" />
+  <text x="680" y="260" font-family="Arial, sans-serif" font-size="14" fill="white">이번 학기 수강 신청 기간이 언제인가요?</text>
+  
+  <!-- 챗봇 응답 예시 -->
+  <rect x="340" y="310" width="550" height="100" rx="15" fill="#e1e7f5" />
+  <text x="370" y="340" font-family="Arial, sans-serif" font-size="14" fill="#333333">이번 학기 수강 신청 기간은 2025년 6월 15일부터</text>
+  <text x="370" y="365" font-family="Arial, sans-serif" font-size="14" fill="#333333">6월 19일까지입니다. 학년별 신청 시간은 학사 공지를</text>
+  <text x="370" y="390" font-family="Arial, sans-serif" font-size="14" fill="#333333">확인해주세요.</text>
+  
+  <!-- 사용자 메시지 예시 2 -->
+  <rect x="650" y="430" width="400" height="60" rx="15" fill="#4A69BD" />
+  <text x="680" y="460" font-family="Arial, sans-serif" font-size="14" fill="white">인공지능개론 과제 제출 마감일이 언제인가요?</text>
+  
+  <!-- 응답 대기 말풍선 -->
+  <rect x="340" y="510" width="120" height="50" rx="15" fill="#e1e7f5" />
+  <circle cx="370" cy="535" r="5" fill="#6e84b9">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="400" cy="535" r="5" fill="#6e84b9">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="430" cy="535" r="5" fill="#6e84b9">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.6s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- 메시지 입력 영역 -->
+  <rect x="310" y="670" width="850" height="60" rx="30" fill="#f0f4f8" filter="drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))" stroke="#e1e5e8" stroke-width="1" />
+  <text x="350" y="705" font-family="Arial, sans-serif" font-size="14" fill="#999999">메시지를 입력하세요...</text>
+  
+  <!-- 전송 버튼 (뉴모픽 스타일) -->
+  <circle cx="1120" cy="700" r="25" fill="#4A69BD" filter="drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2))" />
+  <text x="1120" y="708" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">➡️</text>
+</svg>

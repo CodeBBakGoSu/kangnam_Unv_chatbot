@@ -23,30 +23,40 @@ class CommonAgent(BaseAgent):
     
     def count_tokens(self, text: str) -> int:
         try:
-            return self.model.count_tokens(text).total_tokens
-        except Exception:
+            # 최신 API 방식으로 수정
+            return self.model.count_tokens(contents=text).total_tokens
+        except Exception as e:
+            print(f"[DEBUG] 토큰 계산 중 오류: {e}")
             return 0
 
     async def answer(self, message: str) -> Dict[str, Any]:
         """공통 정보 질문에 답변"""
         prompt = f"{self.system_prompt}\n\n사용자 메시지: {message}"
+        
         try:
-            response = self.model.generate_content(prompt)
+            # 최신 API 방식으로 수정
+            response = self.model.generate_content(contents=prompt)
+            response_text = response.text if hasattr(response, 'text') else response.candidates[0].content.parts[0].text
+            
+            # 토큰 사용량 계산 (디버그용)
             prompt_tokens = self.count_tokens(prompt)
-            response_tokens = self.count_tokens(response.text)
+            response_tokens = self.count_tokens(response_text)
             token_usage = {
                 "prompt_tokens": prompt_tokens,
                 "response_tokens": response_tokens,
                 "total_tokens": prompt_tokens + response_tokens
             }
+            
+            # 토큰 사용량을 디버그 로그로 출력 (응답에는 포함하지 않음)
+            print(f"[DEBUG] 공통 정보 토큰 사용량: {token_usage}")
+            
             return {
-                "response": response.text,
-                "requires_auth": False,
-                "token_usage": token_usage
+                "response": response_text,
+                "requires_auth": False
             }
         except Exception as e:
+            print(f"학교 정보 응답 생성 중 오류 발생: {e}")
             return {
                 "response": f"죄송합니다. 오류가 발생했습니다: {str(e)}",
-                "requires_auth": False,
-                "token_usage": None
+                "requires_auth": False
             } 

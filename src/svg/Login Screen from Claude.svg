@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f7f9fc" />
+  
+  <!-- 로그인 카드 -->
+  <rect x="250" y="120" width="300" height="360" rx="20" fill="#ffffff" filter="drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))" />
+  
+  <!-- 로고 영역 -->
+  <circle cx="400" cy="180" r="40" fill="#4A69BD" />
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" dominant-baseline="middle">강남대학교</text>
+  <text x="400" y="200" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" dominant-baseline="middle">챗봇</text>
+  
+  <!-- 제목 -->
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333333" text-anchor="middle">학생 포털 로그인</text>
+  
+  <!-- 아이디 입력 필드 -->
+  <rect x="290" y="280" width="220" height="45" rx="6" fill="#f5f8fc" stroke="#e1e5e8" stroke-width="1" />
+  <text x="305" y="306" font-family="Arial, sans-serif" font-size="14" fill="#999999">아이디</text>
+  
+  <!-- 비밀번호 입력 필드 -->
+  <rect x="290" y="340" width="220" height="45" rx="6" fill="#f5f8fc" stroke="#e1e5e8" stroke-width="1" />
+  <text x="305" y="366" font-family="Arial, sans-serif" font-size="14" fill="#999999">비밀번호</text>
+  
+  <!-- 로그인 버튼 (뉴모픽 스타일) -->
+  <rect x="290" y="400" width="220" height="50" rx="25" fill="#4A69BD" filter="drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2))" />
+  <text x="400" y="430" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">로그인</text>
+  
+  <!-- 설명 텍스트 -->
+  <text x="400" y="460" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">학교 계정으로 로그인하여 챗봇 서비스를 이용하세요</text>
+  
+  <!-- 푸터 -->
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="12" fill="#999999" text-anchor="middle">© 2025 강남대학교 AI 챗봇 서비스</text>
+</svg>

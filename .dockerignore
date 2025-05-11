@@ -1,0 +1,28 @@
+# flyctl launch added from .gitignore
+# Python
+**/__pycache__
+**/*.py[cod]
+**/*$py.class
+**/*.so
+**/.Python
+**/.venv
+**/venv
+**/ENV
+
+# IDE
+**/.idea
+**/.vscode
+**/*.swp
+**/*.swo
+
+# OS
+**/.DS_Store
+**/Thumbs.db
+
+# Project specific
+**/.env
+**/*.log 
+
+# flyctl launch added from .venv/.gitignore
+.venv/**/*
+fly.toml
