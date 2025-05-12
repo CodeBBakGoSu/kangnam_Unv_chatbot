@@ -8,8 +8,18 @@ import uuid
 import hashlib
 import os
 
+
 # API 기본 URL - Streamlit Cloud에서는 secrets에서 가져오기
 API_BASE_URL = st.secrets.get("BACKEND_URL", "http://localhost:8000/api")
+
+# 변경 부분: 항상 HTTPS로 설정
+if API_BASE_URL.startswith("http://"):
+    API_BASE_URL = API_BASE_URL.replace("http://", "https://")
+
+# 변경 부분: URL 끝에 슬래시 제거
+if API_BASE_URL.endswith("/"):
+    API_BASE_URL = API_BASE_URL[:-1]
+
 
 # 개발 환경에서는 환경변수 사용 (로컬 테스트용)
 if API_BASE_URL == "http://localhost:8000/api" and "BACKEND_URL" in os.environ:
@@ -73,7 +83,7 @@ def call_chat_api(message, data_ready=True):
     token = get_token()
     try:
         # 서버 엔드포인트 URL
-        url = f"{API_BASE_URL}/chat"
+        url = f"{API_BASE_URL}/chat/"
         
         # 요청 헤더 및 데이터
         headers = {
