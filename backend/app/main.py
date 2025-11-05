@@ -12,7 +12,11 @@ app = FastAPI(
 # CORS 설정 추가 (Streamlit Cloud에서 API 호출 허용)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 프로덕션에서는 Streamlit 앱 URL만 허용하는 것이 좋음
+    allow_origins=[
+        "http://localhost:8501",  # 로컬 Streamlit
+        "https://*.streamlit.app",  # Streamlit Cloud
+        "https://kangnam-chatbot.streamlit.app"  # 실제 배포된 Streamlit URL
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

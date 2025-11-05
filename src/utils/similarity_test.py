@@ -1,4 +1,4 @@
-from course_preprocessor import SimilarityMatcher
+from src.etl.course_preprocessor import SimilarityMatcher
 import json
 
 def load_real_courses():
