@@ -1,0 +1,15 @@
+# test_rag 로컬 개발 및 배포를 위한 의존성
+
+# ADK 및 Agent Engine
+google-cloud-aiplatform[adk,agent_engines]
+
+# HTTP 요청 및 크롤링
+requests
+beautifulsoup4
+
+# 환경 변수
+python-dotenv
+
+# 커맨드 라인 플래그 처리 (배포 스크립트용)
+absl-py
+

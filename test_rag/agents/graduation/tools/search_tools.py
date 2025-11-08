@@ -12,8 +12,9 @@
 """
 
 import json
-import subprocess
 from google.adk.tools import FunctionTool
+from google.auth import default
+from google.auth.transport.requests import Request
 from typing import Dict, Optional, Any
 
 # ============================================================================
@@ -42,10 +43,11 @@ def vertex_ai_search_request(query: str, page_size: int = 10) -> Dict[str, Any]:
         검색 결과 딕셔너리
     """
     try:
-        # gcloud access token 가져오기
-        token = subprocess.check_output(
-            ["gcloud", "auth", "print-access-token"], text=True
-        ).strip()
+        # Google Auth 라이브러리로 access token 가져오기 (배포 환경 호환)
+        credentials, project = default()
+        if not credentials.valid:
+            credentials.refresh(Request())
+        token = credentials.token
         
         payload = {
             "query": query,

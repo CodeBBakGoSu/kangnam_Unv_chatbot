@@ -3,8 +3,9 @@
 """
 
 import json
-import subprocess
 from google.adk.tools import FunctionTool
+from google.auth import default
+from google.auth.transport.requests import Request
 from typing import Dict, Any, Optional
 
 # Vertex AI Search 엔진 endpoint
@@ -21,10 +22,11 @@ def vertex_ai_search_request(query: str, page_size: int = 10) -> Dict[str, Any]:
     Vertex AI Search API를 curl 호출 형태로 실행하고 결과를 반환.
     """
     try:
-        # gcloud access token 가져오기
-        token = subprocess.check_output(
-            ["gcloud", "auth", "print-access-token"], text=True
-        ).strip()
+        # Google Auth 라이브러리로 access token 가져오기 (배포 환경 호환)
+        credentials, project = default()
+        if not credentials.valid:
+            credentials.refresh(Request())
+        token = credentials.token
         
         payload = {
             "query": query,
