@@ -242,7 +242,7 @@ python deploy.py --send \
 
 ### 3. 배포 목록 확인
 
-```bash
+   ```bash
 python deploy.py --list
 ```
 

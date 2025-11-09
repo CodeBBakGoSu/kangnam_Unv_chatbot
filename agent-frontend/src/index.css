@@ -1,3 +1,139 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 페이드 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* 채팅 스크롤 최적화 */
+.chat-container {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  contain: layout style;
+}
+
+.chat-message {
+  contain: layout style paint;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* 사용자 메시지 배경 고정 */
+.chat-message.user-message {
+  background-color: #2563eb !important; /* bg-blue-600 */
+  background-attachment: scroll;
+  background-clip: padding-box;
+}
+
+/* 봇 메시지 배경 고정 */
+.chat-message.bot-message {
+  background-color: #ffffff !important; /* bg-white */
+  background-attachment: scroll;
+  background-clip: padding-box;
+}
+
+/* 채팅 컨테이너 스크롤바 스타일링 */
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* 마크다운 스타일링 */
+.markdown-body {
+  color: inherit;
+}
+
+/* 텍스트에어리어 자동 높이 조절 */
+textarea {
+  field-sizing: content;
+  /* Firefox 지원 */
+  -moz-field-sizing: content;
+}
+
+/* 텍스트에어리어 스크롤바 숨김 */
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+textarea {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body li {
+  margin-bottom: 0.25rem;
+}
+
+.markdown-body strong {
+  font-weight: 700;
+}
+
+.markdown-body code {
+  font-family: 'Courier New', monospace;
+}
+
+.markdown-body pre {
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
+.typing-dots {
+  display: inline-flex;
+  gap: 4px;
+  padding: 6px 10px;
+}
+
+.typing-dots div {
+  width: 6px;
+  height: 6px;
+  background-color: #9ca3af; /* gray-400 */
+  border-radius: 50%;
+  animation: typingBounce 1s infinite;
+}
+
+.typing-dots div:nth-child(1) { animation-delay: 0ms; }
+.typing-dots div:nth-child(2) { animation-delay: 150ms; }
+.typing-dots div:nth-child(3) { animation-delay: 300ms; }
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}

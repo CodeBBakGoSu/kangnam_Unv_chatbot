@@ -1,0 +1,15 @@
+# FastAPI 및 서버
+fastapi==0.119.1
+uvicorn[standard]==0.38.0
+pydantic==2.12.3
+
+# Google Cloud & Vertex AI (프로젝트 루트와 동일 버전)
+google-cloud-aiplatform==1.122.0
+vertexai==1.43.0
+google-adk==1.16.0
+
+# 환경 변수
+python-dotenv==1.1.1
+
+# CORS 지원 (FastAPI에 포함되어 있지만 명시)
+
