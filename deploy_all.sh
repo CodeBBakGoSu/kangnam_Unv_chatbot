@@ -283,11 +283,27 @@ if [ "$DEPLOY_BACKEND" = true ]; then
     if [ -n "$SERVICE_URL" ]; then
         echo "   Service URL: $SERVICE_URL"
         echo ""
+        
+        # Backend 헬스 체크
+        echo -e "${YELLOW}🧪 Backend 테스트 중...${NC}"
+        
+        # /chat/new 엔드포인트 테스트
+        TEST_RESULT=$(curl -s -w "\n%{http_code}" -X POST "$SERVICE_URL/chat/new" 2>/dev/null || echo "000")
+        HTTP_CODE=$(echo "$TEST_RESULT" | tail -n1)
+        
+        if [ "$HTTP_CODE" = "200" ]; then
+            echo -e "${GREEN}   ✅ Backend API 정상 작동!${NC}"
+        else
+            echo -e "${RED}   ⚠️  Backend API 응답 코드: $HTTP_CODE${NC}"
+            echo -e "${YELLOW}   💡 로그 확인: gcloud run logs tail agent-backend-api --region=us-east4${NC}"
+        fi
+        
+        echo ""
         echo -e "${YELLOW}💡 참고:${NC}"
         echo "   • Backend URL은 변경되지 않았습니다"
         echo "   • Frontend 재배포는 필요하지 않습니다"
         echo ""
-        echo -e "${YELLOW}🧪 테스트:${NC}"
+        echo -e "${YELLOW}🔧 추가 테스트:${NC}"
         echo "   curl -X POST $SERVICE_URL/chat/new"
     fi
 elif [ "$DEPLOY_AGENT" = true ]; then
@@ -297,6 +313,9 @@ elif [ "$DEPLOY_AGENT" = true ]; then
     echo "   • Agent Engine만 업데이트되었습니다"
     echo "   • Backend는 자동으로 새 Agent를 사용합니다"
     echo "   • Frontend 재배포는 필요하지 않습니다"
+    echo ""
+    echo -e "${YELLOW}🧪 Backend 재배포가 필요합니다:${NC}"
+    echo "   cd agent-backend && ./deploy_backend.sh"
 fi
 
 echo ""

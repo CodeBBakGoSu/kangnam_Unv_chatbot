@@ -134,28 +134,14 @@ echo "🔄 환경변수 업데이트 중..."
 # .env 파일 백업
 cp .env .env.backup
 
-# 이전 ID를 백업으로 저장하고 새 ID를 활성화
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    # macOS
-    sed -i.bak "s|AGENT_RESOURCE_ID=.*|AGENT_RESOURCE_ID=$NEW_RESOURCE_ID|g" .env
-else
-    # Linux
-    sed -i.bak "s|AGENT_RESOURCE_ID=.*|AGENT_RESOURCE_ID=$NEW_RESOURCE_ID|g" .env
-fi
+# .env 파일을 안전하게 업데이트 (grep으로 다른 줄 유지, 새 값 추가)
+{
+    grep -v "^AGENT_RESOURCE_ID=" .env | grep -v "^AGENT_RESOURCE_ID_BACKUP="
+    echo "AGENT_RESOURCE_ID=$NEW_RESOURCE_ID"
+    echo "AGENT_RESOURCE_ID_BACKUP=$CURRENT_ID"
+} > .env.tmp
 
-# 백업 ID 추가 (중복 방지)
-if grep -q "AGENT_RESOURCE_ID_BACKUP=" .env; then
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        sed -i.bak "s|AGENT_RESOURCE_ID_BACKUP=.*|AGENT_RESOURCE_ID_BACKUP=$CURRENT_ID|g" .env
-    else
-        sed -i.bak "s|AGENT_RESOURCE_ID_BACKUP=.*|AGENT_RESOURCE_ID_BACKUP=$CURRENT_ID|g" .env
-    fi
-else
-    echo "AGENT_RESOURCE_ID_BACKUP=$CURRENT_ID" >> .env
-fi
-
-# 임시 백업 파일 삭제
-rm -f .env.bak
+mv .env.tmp .env
 
 echo ""
 echo "=" | tr '=' '=' | head -c 70
