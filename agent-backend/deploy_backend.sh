@@ -23,9 +23,15 @@ if [ -f ../.env ]; then
     set -a
     source ../.env
     set +a
+    echo "  ✓ .env 파일 로드 완료"
 else
     echo -e "${RED}에러: ../.env 파일을 찾을 수 없습니다.${NC}"
     echo "프로젝트 루트에 .env 파일이 있는지 확인하세요."
+    echo ""
+    echo "해결 방법:"
+    echo "  1. 프로젝트 루트로 이동: cd .."
+    echo "  2. Agent Engine 배포: ./update_deployment.sh"
+    echo "  3. 다시 시도: cd agent-backend && ./deploy_backend.sh"
     exit 1
 fi
 
@@ -33,13 +39,22 @@ fi
 echo -e "${YELLOW}[2/5]${NC} 환경 변수 확인 중..."
 if [ -z "$AGENT_RESOURCE_ID" ]; then
     echo -e "${RED}에러: AGENT_RESOURCE_ID가 설정되지 않았습니다.${NC}"
-    echo "먼저 Agent Engine을 배포하세요: python deploy.py --deploy"
+    echo ""
+    echo "해결 방법:"
+    echo "  1. 프로젝트 루트로 이동: cd .."
+    echo "  2. Agent Engine 배포: ./update_deployment.sh"
+    echo "  3. 다시 시도: cd agent-backend && ./deploy_backend.sh"
+    echo ""
+    echo "또는 통합 배포 스크립트 사용:"
+    echo "  ./deploy_all.sh"
     exit 1
 fi
 
 echo "  ✓ AGENT_RESOURCE_ID: $AGENT_RESOURCE_ID"
 echo "  ✓ GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT:-kangnam-backend}"
 echo "  ✓ VERTEX_AI_LOCATION: ${VERTEX_AI_LOCATION:-us-east4}"
+echo ""
+echo -e "${GREEN}  → Backend가 이 Agent Engine에 연결됩니다!${NC}"
 
 # 3. gcloud 인증 확인
 echo -e "${YELLOW}[3/5]${NC} Google Cloud 인증 확인 중..."
