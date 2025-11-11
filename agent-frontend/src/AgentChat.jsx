@@ -131,14 +131,8 @@ const AgentChat = () => {
   const handleSendMessage = async () => {
     if (inputValue.trim() === '' || !userId || !sessionId || isLoading) return;
 
-     if (textareaRef.current) {
-         textareaRef.current.value = '';
-       }
-       setInputValue('');
-       setTextareaHeight(50);
-
-    const userMessage = { text: inputValue, sender: 'user', id: Date.now() };
-    const messageText = inputValue;
+    const messageText = inputValue.trim();
+    const userMessage = { text: messageText, sender: 'user', id: Date.now() };
     const botMessageId = Date.now() + 1;
 
     const typingIndicator = {
@@ -148,16 +142,16 @@ const AgentChat = () => {
        isTyping: true
      };
     
-    // 사용자 메시지와 봇 플레이스홀더 추가
-    setChatMessages(prev => [...prev, userMessage, typingIndicator]);
+    // 입력란 즉시 초기화 (메시지 전송 전에!)
     setInputValue('');
-    
-    // 입력란 높이 리셋
     if (textareaRef.current) {
       textareaRef.current.value = '';
       textareaRef.current.style.height = '50px';
       setTextareaHeight(50);
     }
+    
+    // 사용자 메시지와 봇 플레이스홀더 추가
+    setChatMessages(prev => [...prev, userMessage, typingIndicator]);
     
     // 메시지 전송 시 자동 스크롤 활성화
     isAtBottomRef.current = true;
@@ -234,18 +228,18 @@ const AgentChat = () => {
        text: '',
        sender: 'bot',
        id: botMessageId,
-       isTyping: true // 새 플래그 추가
+       isTyping: true
      };
 
-
-    setChatMessages(prev => [...prev, userMessage, typingIndicator]);
+    // 입력란 초기화
     setInputValue('');
-    
-    // 입력란 높이 리셋
     if (textareaRef.current) {
+      textareaRef.current.value = '';
       textareaRef.current.style.height = '50px';
       setTextareaHeight(50);
     }
+
+    setChatMessages(prev => [...prev, userMessage, typingIndicator]);
     
     // 메시지 전송 시 자동 스크롤 활성화
     isAtBottomRef.current = true;
@@ -313,20 +307,9 @@ const AgentChat = () => {
   // textarea 높이 자동 조절
   const adjustTextareaHeight = (textarea) => {
     if (textarea) {
-      const currentHeight = textarea.offsetHeight;
-      
       // 높이를 'auto'로 설정하여 정확한 scrollHeight 측정
       textarea.style.height = 'auto';
       const scrollHeight = textarea.scrollHeight;
-      const lineCount = textarea.value.split('\n').length;
-
-      console.log('adjustTextareaHeight:', {
-        currentHeight,
-        scrollHeight,
-        valueLength: textarea.value.length,
-        lineCount,
-        needsResize: scrollHeight > currentHeight
-      });
 
       // 최소 50px, 최대 120px
       const minHeight = 50;
@@ -334,14 +317,13 @@ const AgentChat = () => {
       const newHeight = Math.max(minHeight, Math.min(scrollHeight, maxHeight));
       
       textarea.style.height = newHeight + 'px';
-      setTextareaHeight(newHeight); // 상태 업데이트로 채팅 컨테이너 높이도 조절
-      console.log('Height set to:', newHeight + 'px', '(was:', currentHeight + 'px)');
+      setTextareaHeight(newHeight);
     }
   };
 
   const handleTextareaChange = (e) => {
     setInputValue(e.target.value);
-    // 높이 조절은 onInput에서 처리
+    adjustTextareaHeight(e.target);
   };
 
   return (
@@ -490,21 +472,20 @@ const AgentChat = () => {
         <div className="w-full max-w-2xl mb-3">
           <div className="relative flex items-start">
             <textarea
-              ref={(textarea) => {
-                textareaRef.current = textarea;
-                if (textarea) adjustTextareaHeight(textarea);
-              }}
+              ref={textareaRef}
               value={inputValue}
               onChange={handleTextareaChange}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
-                  // 모든 Enter 조합 처리
+                  // 한글 입력 중(조합 중)에는 엔터 이벤트 무시
+                  if (e.nativeEvent.isComposing) {
+                    return;
+                  }
+                  
                   if (e.metaKey || e.ctrlKey) {
                     // Cmd+Enter (Mac) 또는 Ctrl+Enter (Windows/Linux): 줄바꿈
-                    console.log('Cmd/Ctrl+Enter: 줄바꿈');
                     e.preventDefault();
                     
-                    // 현재 커서 위치에 줄바꿈 삽입
                     const textarea = e.target;
                     const start = textarea.selectionStart;
                     const end = textarea.selectionEnd;
@@ -512,7 +493,6 @@ const AgentChat = () => {
                     
                     setInputValue(newValue);
                     
-                    // 다음 프레임에 커서 위치 복원 및 높이 조절
                     requestAnimationFrame(() => {
                       textarea.selectionStart = textarea.selectionEnd = start + 1;
                       adjustTextareaHeight(textarea);
@@ -520,24 +500,19 @@ const AgentChat = () => {
                     return;
                   } else if (!e.shiftKey) {
                     // Enter만: 메시지 전송
-                    console.log('Enter: 메시지 전송');
                     e.preventDefault();
+                    
+                    // 입력값이 비어있으면 전송하지 않음
+                    if (inputValue.trim() === '') {
+                      return;
+                    }
+                    
                     handleSendMessage();
                   } else {
-                    // Shift+Enter: 아무 동작 안 함
-                    console.log('Shift+Enter: 무시');
-                    e.preventDefault();
+                    // Shift+Enter: 기본 동작 허용 (줄바꿈)
+                    // e.preventDefault() 제거하여 기본 줄바꿈 동작 허용
                   }
                 }
-              }}
-              onInput={(e) => {
-                console.log('onInput fired, value length:', e.target.value.length);
-                // 내용 변경 시 높이 자동 조절 (Cmd/Ctrl+Enter 포함)
-                adjustTextareaHeight(e.target);
-              }}
-              onBlur={(e) => {
-                // 포커스 잃을 때도 높이 조절 (안전장치)
-                adjustTextareaHeight(e.target);
               }}
               className="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white py-3 pl-5 pr-14 text-base focus:ring-2 focus:ring-[#4682B4] focus:border-[#4682B4] transition-shadow shadow-lg resize-none max-h-[120px] leading-relaxed"
               placeholder="강냉이에게 무엇이든 물어보세요..."
