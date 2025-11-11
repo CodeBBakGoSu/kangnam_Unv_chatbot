@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* iOS 안전영역 변수 정의 */
+:root {
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* 전체 배경 그라데이션 (모바일 흰색 여백 방지) */
+html, body, #root {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden; /* 중요: 화면 전체 스크롤 방지 */
+  background: linear-gradient(to bottom right, #e0f2fe, #bae6fd);
+  /* from-sky-100 to-sky-200 */
+}
+
+/* Dark mode 지원 */
+@media (prefers-color-scheme: dark) {
+  html, body, #root {
+    background: linear-gradient(to bottom right, #075985, #0c4a6e);
+    /* from-sky-800 to-sky-900 */
+  }
+}
+
 /* 페이드 애니메이션 */
 @keyframes fadeIn {
   from {

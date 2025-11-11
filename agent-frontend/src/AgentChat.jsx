@@ -11,6 +11,7 @@ const AgentChat = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [textareaHeight, setTextareaHeight] = useState(50); // 입력란 높이 추적
   const [showScrollButton, setShowScrollButton] = useState(false); // 스크롤 버튼 표시 여부
+  const [isMobile, setIsMobile] = useState(false); // 모바일 감지
   const chatContainerRef = useRef(null);
   const textareaRef = useRef(null);
   const isAtBottomRef = useRef(true); // 스크롤이 맨 아래에 있는지 추적
@@ -47,6 +48,23 @@ const AgentChat = () => {
   // 컴포넌트 마운트 시 자동 세션 시작
   useEffect(() => {
     startNewSession();
+  }, []);
+
+  // 모바일 감지
+  useEffect(() => {
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+      const isSmallScreen = window.innerWidth < 768; // md breakpoint
+      setIsMobile(isMobileDevice || isSmallScreen);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   // 직접 렌더링
@@ -327,9 +345,13 @@ const AgentChat = () => {
   };
 
   return (
-    <div className="flex h-screen w-full flex-col overflow-hidden bg-gradient-to-br from-sky-100 to-sky-200 dark:from-sky-800 dark:to-sky-900 font-display text-gray-800 dark:text-gray-200">      <div className="flex flex-1 flex-col items-center justify-between p-2 md:p-6 lg:p-6">
+    <div 
+      className="flex flex-col w-full overflow-hidden bg-gradient-to-br from-sky-100 to-sky-200 dark:from-sky-800 dark:to-sky-900 font-display text-gray-800 dark:text-gray-200"
+      style={{ height: '100dvh' }}
+    >
+      <div className="flex flex-col items-center p-2 md:p-6 lg:p-6 flex-1 min-h-0">
         {/* New 버튼 헤더 */}
-        <div className="flex items-center justify-between w-full max-w-2xl mb-4">
+        <div className="flex items-center justify-between w-full max-w-2xl mb-4 flex-shrink-0">
           <button
             onClick={startNewSession}
             disabled={isLoading}
@@ -343,11 +365,11 @@ const AgentChat = () => {
         </div>
 
         {chatMessages.length === 0 ? (
-          // Initial View
-          <div className="flex w-full max-w-2xl flex-col items-center justify-center gap-10 flex-1">
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-white">강남대학교 챗봇 강냉이</h1>
-            <div className="w-full">
-              <div className="mb-4 flex flex-wrap justify-center gap-3">
+          // Initial View - 높이를 명확히 제한
+          <div className="flex w-full max-w-2xl flex-col items-center justify-center gap-6 flex-1 min-h-0 py-4 overflow-hidden">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">강남대학교 챗봇 강냉이</h1>
+            <div className="w-full px-4">
+              <div className="flex flex-wrap justify-center gap-3">
                 {recommendedQuestions.map((question, index) => (
                   <button
                     key={index}
@@ -363,18 +385,20 @@ const AgentChat = () => {
         ) : (
           // Chat View
           <div 
-            className="relative w-full max-w-2xl mb-3"
-            style={{
-              // 입력란 높이에 따라 동적으로 조절: 100vh - (헤더 80px + 입력란 높이 + 여백 120px)
+            className={`w-full max-w-2xl flex-1 flex flex-col min-h-0 ${isMobile ? '' : 'mb-3'}`}
+            style={!isMobile ? {
+              // 데스크톱: 기존 방식 유지
               maxHeight: `calc(100vh - ${textareaHeight + 120}px)`,
-              minHeight: '700px', // 최소 높이 보장 (더 크게)
-              transition: 'max-height 0.2s ease-out' // 부드러운 전환
-            }}
+              minHeight: '700px',
+              transition: 'max-height 0.2s ease-out'
+            } : undefined}
           >
             <div
               ref={chatContainerRef}
               onScroll={handleScroll}
-              className="w-full h-full overflow-y-auto chat-container bg-gradient-to-b from-sky-50 to-sky-100 rounded-lg px-4 pt-2 pb-1"
+              className={`w-full chat-container bg-gradient-to-b from-sky-50 to-sky-100 rounded-lg px-4 pt-2 flex-1 min-h-0 overflow-y-auto ${
+                isMobile ? 'pb-24' : 'pb-1'
+              }`}
               style={{
                 scrollBehavior: 'smooth',
                 backgroundAttachment: 'local',
@@ -467,9 +491,17 @@ const AgentChat = () => {
             </div>
           </div>
         )}
+      </div>
 
-        {/* Input Area */}
-        <div className="w-full max-w-2xl mb-3">
+      {/* Input Area - 항상 표시 */}
+      <div className={`w-full flex justify-center ${
+        isMobile 
+          ? 'sticky bottom-0 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border-t border-white/40 dark:border-gray-700 pt-2' 
+          : 'px-2 md:px-6 lg:px-6 pb-3'
+      }`}
+      style={isMobile ? { paddingBottom: 'calc(var(--safe-bottom) + 8px)' } : undefined}
+      >
+        <div className="w-full max-w-2xl">
           <div className="relative flex items-start">
             <textarea
               ref={textareaRef}
