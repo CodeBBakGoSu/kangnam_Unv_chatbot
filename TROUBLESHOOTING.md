@@ -18,11 +18,11 @@
 ```bash
 # 로컬에서 import 테스트
 cd /Users/hong-gihyeon/Desktop/cap
-python -c "from test_rag.agent import root_agent; print('✅ Import 성공!')"
+python -c "from goole_adk.agent import root_agent; print('✅ Import 성공!')"
 ```
 
 **해결 방법**:
-- `test_rag/__init__.py` 파일이 모든 서브 디렉토리에 있는지 확인
+- `goole_adk/__init__.py` 파일이 모든 서브 디렉토리에 있는지 확인
 - 순환 import가 없는지 확인
 - 모든 경로가 올바른지 확인
 
@@ -32,12 +32,12 @@ python -c "from test_rag.agent import root_agent; print('✅ Import 성공!')"
 **확인 방법**:
 ```bash
 # config.py 확인
-cat test_rag/config.py
+cat goole_adk/config.py
 ```
 
 **해결 방법**:
 ```python
-# test_rag/config.py에서 하드코딩된 값 확인
+# goole_adk/config.py에서 하드코딩된 값 확인
 PROJECT_ID = "kangnam-backend"  # 올바른 프로젝트 ID
 VERTEX_AI_LOCATION = "us-east4"  # 올바른 리전
 ```
@@ -48,7 +48,7 @@ VERTEX_AI_LOCATION = "us-east4"  # 올바른 리전
 **확인 방법**:
 ```bash
 # 각 에이전트의 search_tools.py 확인
-grep -r "VERTEX_SEARCH_ENDPOINT" test_rag/agents/
+grep -r "VERTEX_SEARCH_ENDPOINT" goole_adk/agents/
 ```
 
 **해결 방법**:
@@ -85,7 +85,7 @@ Agent 정의 시 문법 오류나 잘못된 파라미터가 있을 수 있습니
 **확인 방법**:
 ```bash
 # 각 에이전트 파일 문법 체크
-python -m py_compile test_rag/agents/*/agent.py
+python -m py_compile goole_adk/agents/*/agent.py
 ```
 
 **해결 방법**:
@@ -107,7 +107,7 @@ source .venv/bin/activate
 
 # Import 테스트
 python -c "
-from test_rag.agent import root_agent
+from goole_adk.agent import root_agent
 print('✅ Root agent import 성공!')
 print(f'Agent name: {root_agent.name}')
 print(f'Sub-agents: {len(root_agent.sub_agents)}')
@@ -115,10 +115,10 @@ print(f'Sub-agents: {len(root_agent.sub_agents)}')
 
 # 각 서브 에이전트 테스트
 python -c "
-from test_rag.agents.graduation import graduation_agent
-from test_rag.agents.subject import subject_agent
-from test_rag.agents.professor.agent import professor_agent
-from test_rag.agents.basic_info.agent import basic_info_agent
+from goole_adk.agents.graduation import graduation_agent
+from goole_adk.agents.subject import subject_agent
+from goole_adk.agents.professor.agent import professor_agent
+from goole_adk.agents.basic_info.agent import basic_info_agent
 print('✅ 모든 서브 에이전트 import 성공!')
 "
 ```
@@ -141,7 +141,7 @@ Traceback (most recent call last):
   File "deploy.py", line 113, in create_session
     remote_session = remote_app.create_session(user_id=user_id)
   ...
-ImportError: cannot import name 'basic_info_agent' from 'test_rag.agents'
+ImportError: cannot import name 'basic_info_agent' from 'goole_adk.agents'
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
@@ -172,8 +172,8 @@ python deploy.py --send \
 모든 서브 에이전트가 올바르게 export되는지 확인:
 
 ```bash
-# test_rag/agents/__init__.py 확인
-cat test_rag/agents/__init__.py
+# goole_adk/agents/__init__.py 확인
+cat goole_adk/agents/__init__.py
 ```
 
 **올바른 예시**:
@@ -226,7 +226,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # 3. Import 테스트
-python -c "from test_rag.agent import root_agent; print('✅ 성공!')"
+python -c "from goole_adk.agent import root_agent; print('✅ 성공!')"
 
 # 4. 재배포
 ./update_deployment.sh
@@ -292,11 +292,11 @@ echo "🧪 Import 테스트 시작..."
 
 python -c "
 try:
-    from test_rag.agent import root_agent
-    from test_rag.agents.graduation import graduation_agent
-    from test_rag.agents.subject import subject_agent
-    from test_rag.agents.professor.agent import professor_agent
-    from test_rag.agents.basic_info.agent import basic_info_agent
+    from goole_adk.agent import root_agent
+    from goole_adk.agents.graduation import graduation_agent
+    from goole_adk.agents.subject import subject_agent
+    from goole_adk.agents.professor.agent import professor_agent
+    from goole_adk.agents.basic_info.agent import basic_info_agent
     print('✅ 모든 import 성공!')
 except Exception as e:
     print(f'❌ Import 실패: {e}')
@@ -337,7 +337,7 @@ python --version
 pip list
 
 # 프로젝트 구조
-tree test_rag -L 2
+tree goole_adk -L 2
 
 # 환경 변수
 cat .env

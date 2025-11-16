@@ -1,5 +1,5 @@
 """
-test_rag Agent Engine 배포 스크립트
+goole_adk Agent Engine 배포 스크립트
 
 강남대학교 Multi-Agent 시스템을 Vertex AI Agent Engine에 배포합니다.
 """
@@ -11,7 +11,7 @@ from absl import app, flags
 from dotenv import load_dotenv
 from vertexai import agent_engines
 from vertexai.preview import reasoning_engines
-from test_rag.agent import root_agent
+from goole_adk.agent import root_agent
 
 FLAGS = flags.FLAGS
 
@@ -49,7 +49,7 @@ def create() -> None:
         enable_tracing=True,
     )
     
-    print("📦 Packaging test_rag...")
+    print("📦 Packaging goole_adk...")
     
     # Agent Engine으로 배포
     remote_app = agent_engines.create(
@@ -60,7 +60,7 @@ def create() -> None:
             "beautifulsoup4",
             "python-dotenv",
         ],
-        extra_packages=["./test_rag"],
+        extra_packages=["./goole_adk"],
     )
     
     print()
